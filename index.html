@@ -688,11 +688,14 @@
     .contact-card:hover { border-color: var(--green); }
     .contact-card-icon {
       width: 56px; height: 56px;
-      background: rgba(45,106,46,0.15);
-      border-radius: 50%;
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
       font-size: 1.3rem;
+    }
+    .contact-card-icon img {
+      width: 48px; height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
     }
     .contact-card h3 {
       font-family: 'Oswald', sans-serif;
@@ -727,14 +730,16 @@
     .footer-copy { font-size: 0.8rem; color: var(--gray); }
     .footer-socials { display: flex; gap: 16px; }
     .footer-socials a {
-      width: 40px; height: 40px;
-      background: rgba(45,106,46,0.12);
-      border-radius: 50%;
+      width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 0.85rem; color: var(--gray);
-      transition: background 0.3s, color 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
     }
-    .footer-socials a:hover { background: var(--green); color: var(--white); }
+    .footer-socials a:hover { opacity: 0.8; transform: translateY(-2px); }
+    .footer-socials a img {
+      width: 32px; height: 32px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
 
     /* ===== Scroll animations — initial states ===== */
     .reveal { opacity: 0; transform: translateY(40px); }
@@ -1227,12 +1232,12 @@
           <p><a href="mailto:spartantrackclubhawaii@gmail.com">spartantrackclubhawaii@gmail.com</a></p>
         </div>
         <div class="contact-card reveal">
-          <div class="contact-card-icon">&#128247;</div>
+          <div class="contact-card-icon"><img src="images/donations/instagram.png" alt="Instagram"></div>
           <h3>Instagram</h3>
           <p><a href="https://www.instagram.com/trackhawaii/" target="_blank" rel="noopener">@TrackHawaii</a></p>
         </div>
         <div class="contact-card reveal">
-          <div class="contact-card-icon">&#120143;</div>
+          <div class="contact-card-icon"><img src="images/donations/twitter.png" alt="X"></div>
           <h3>X / Twitter</h3>
           <p><a href="https://x.com/TrackHawaii" target="_blank" rel="noopener">@TrackHawaii</a></p>
         </div>
@@ -1246,9 +1251,8 @@
       <div class="footer-brand">Spartan <span>Track</span> Club Hawaii</div>
       <div class="footer-copy">&copy; 2024 Spartan Track Club Hawaii. 501(c)(3) Nonprofit. All rights reserved.</div>
       <div class="footer-socials">
-        <a href="https://www.instagram.com/trackhawaii/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
-        <a href="https://x.com/TrackHawaii" target="_blank" rel="noopener" aria-label="X / Twitter">X</a>
-        <a href="https://www.spartantrackclubhawaii.org/" target="_blank" rel="noopener" aria-label="Website">W</a>
+        <a href="https://www.instagram.com/trackhawaii/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/donations/instagram.png" alt="Instagram"></a>
+        <a href="https://x.com/TrackHawaii" target="_blank" rel="noopener" aria-label="X / Twitter"><img src="images/donations/twitter.png" alt="X"></a>
       </div>
     </div>
   </footer>
