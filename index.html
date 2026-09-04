@@ -617,12 +617,13 @@
     }
     .donate-card:hover::before { opacity: 1; }
     .donate-card-icon {
-      width: 72px; height: 72px;
-      background: rgba(45,106,46,0.12);
-      border-radius: 50%;
+      height: 64px;
       display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 20px;
-      font-size: 1.6rem;
+      margin: 0 auto 24px;
+    }
+    .donate-card-icon img {
+      max-height: 56px; max-width: 160px;
+      object-fit: contain;
     }
     .donate-card h3 {
       font-family: 'Oswald', sans-serif;
@@ -1186,19 +1187,19 @@
       </div>
       <div class="donate-grid">
         <div class="donate-card reveal">
-          <div class="donate-card-icon">&#128179;</div>
+          <div class="donate-card-icon"><img src="images/donations/Clover_idscfTrYLO_2.png" alt="Clover"></div>
           <h3>Pay with Clover</h3>
           <p>Debit card, credit card, Apple Pay, or Google Pay</p>
           <a href="https://link.clover.com/urlshortener/5FqmrT" target="_blank" rel="noopener" class="donate-btn donate-btn-clover">Donate with Clover</a>
         </div>
         <div class="donate-card reveal">
-          <div class="donate-card-icon">&#9899;</div>
+          <div class="donate-card-icon"><img src="images/donations/PayPal-Monogram-FullColor-RGB.png" alt="PayPal"></div>
           <h3>Pay with PayPal</h3>
           <p>Secure donation through your PayPal account or guest checkout</p>
           <a href="https://www.paypal.com/donate/?hosted_button_id=K4AS5SKMQBETS" target="_blank" rel="noopener" class="donate-btn donate-btn-paypal">Donate with PayPal</a>
         </div>
         <div class="donate-card reveal">
-          <div class="donate-card-icon">&#9898;</div>
+          <div class="donate-card-icon"><img src="images/donations/Venmo_Logo_Blue.png" alt="Venmo"></div>
           <h3>Pay with Venmo</h3>
           <p>Quick and easy donation through your Venmo account</p>
           <a href="https://account.venmo.com/payment-link?audience=public&recipients=%2CSpartanTrackClubHawaii&txn=charge" target="_blank" rel="noopener" class="donate-btn donate-btn-venmo">Donate with Venmo</a>
