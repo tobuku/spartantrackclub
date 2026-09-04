@@ -586,6 +586,90 @@
       max-width: 500px;
     }
 
+    /* ===== Donations ===== */
+    #donate { background: var(--black-soft); }
+    .donate-intro {
+      max-width: 680px; margin: 0 auto 48px; text-align: center;
+    }
+    .donate-intro p { font-size: 1rem; color: #bbb; line-height: 1.8; }
+    .donate-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+      max-width: 960px; margin: 0 auto 48px;
+    }
+    .donate-card {
+      background: var(--black);
+      border: 1px solid rgba(45,106,46,0.15);
+      border-radius: 12px;
+      padding: 40px 28px;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+      position: relative; overflow: hidden;
+    }
+    .donate-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0;
+      height: 3px; background: var(--green); opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .donate-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--green);
+      box-shadow: 0 12px 40px rgba(45,106,46,0.15);
+    }
+    .donate-card:hover::before { opacity: 1; }
+    .donate-card-icon {
+      width: 72px; height: 72px;
+      background: rgba(45,106,46,0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 1.6rem;
+    }
+    .donate-card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem; text-transform: uppercase;
+      letter-spacing: 1px; margin-bottom: 8px;
+    }
+    .donate-card p {
+      font-size: 0.85rem; color: #999; line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .donate-btn {
+      display: inline-block;
+      padding: 12px 32px;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.9rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1.5px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    .donate-btn-clover {
+      background: var(--green); color: var(--white);
+    }
+    .donate-btn-clover:hover { background: var(--green-light); }
+    .donate-btn-paypal {
+      background: #0070ba; color: var(--white);
+    }
+    .donate-btn-paypal:hover { background: #005ea6; }
+    .donate-btn-venmo {
+      background: #3d95ce; color: var(--white);
+    }
+    .donate-btn-venmo:hover { background: #2d7eb5; }
+    .donate-tax {
+      max-width: 680px; margin: 0 auto;
+      text-align: center;
+      padding: 28px 32px;
+      background: rgba(45,106,46,0.06);
+      border: 1px solid rgba(45,106,46,0.12);
+      border-radius: 8px;
+    }
+    .donate-tax p {
+      font-size: 0.85rem; color: #999; line-height: 1.7;
+    }
+    .donate-tax strong { color: var(--green-light); }
+    @media (max-width: 800px) {
+      .donate-grid { grid-template-columns: 1fr; max-width: 400px; }
+    }
+
     /* ===== Contact ===== */
     #contact { background: var(--black-soft); }
     .contact-grid {
@@ -681,6 +765,7 @@
       <a href="#practice">Practice</a>
       <a href="#meets">Meets</a>
       <a href="#faq">FAQ</a>
+      <a href="#donate">Donate</a>
       <a href="#contact">Contact</a>
       <a href="https://www.spartantrackclubhawaii.org/register" target="_blank" rel="noopener" class="nav-cta">Register</a>
     </div>
@@ -1084,6 +1169,43 @@
           <p>Rep Spartan Track Club Hawaii with official team gear &mdash; uniforms, backpacks, and more available in the team store.</p>
         </div>
         <a href="https://www.spartantrackclubhawaii.org/category/all-products" target="_blank" rel="noopener" class="btn btn-primary">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donations -->
+  <section id="donate">
+    <div class="section-container">
+      <div class="section-header reveal">
+        <div class="section-label">Support the Club</div>
+        <h2 class="section-title">Donate</h2>
+        <div class="green-line"></div>
+      </div>
+      <div class="donate-intro reveal">
+        <p>Spartan Track Club Hawaii is a 501(c)(3) nonprofit organization. Your generous donations help fund equipment, facility access, travel to national championships, uniforms, and scholarships for athletes who need financial assistance. Every dollar makes a difference in the life of a young athlete.</p>
+      </div>
+      <div class="donate-grid">
+        <div class="donate-card reveal">
+          <div class="donate-card-icon">&#128179;</div>
+          <h3>Pay with Clover</h3>
+          <p>Debit card, credit card, Apple Pay, or Google Pay</p>
+          <a href="https://link.clover.com/urlshortener/5FqmrT" target="_blank" rel="noopener" class="donate-btn donate-btn-clover">Donate with Clover</a>
+        </div>
+        <div class="donate-card reveal">
+          <div class="donate-card-icon">&#9899;</div>
+          <h3>Pay with PayPal</h3>
+          <p>Secure donation through your PayPal account or guest checkout</p>
+          <a href="https://www.paypal.com/donate/?hosted_button_id=K4AS5SKMQBETS" target="_blank" rel="noopener" class="donate-btn donate-btn-paypal">Donate with PayPal</a>
+        </div>
+        <div class="donate-card reveal">
+          <div class="donate-card-icon">&#9898;</div>
+          <h3>Pay with Venmo</h3>
+          <p>Quick and easy donation through your Venmo account</p>
+          <a href="https://account.venmo.com/payment-link?audience=public&recipients=%2CSpartanTrackClubHawaii&txn=charge" target="_blank" rel="noopener" class="donate-btn donate-btn-venmo">Donate with Venmo</a>
+        </div>
+      </div>
+      <div class="donate-tax reveal">
+        <p><strong>Tax-Deductible</strong> &mdash; Spartan Track Club Hawaii is a registered 501(c)(3) nonprofit organization. All donations are tax-deductible to the extent allowed by law. You will receive a receipt for your records.</p>
       </div>
     </div>
   </section>
